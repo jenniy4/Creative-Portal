@@ -3,6 +3,7 @@ import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
+import { BookingForm } from "@/components/booking-form"
 import {
   BookOpen,
   Heart,
@@ -564,122 +565,7 @@ export default function LandingPage() {
             <div className="max-w-3xl mx-auto">
               <Card className="border-rose-100 rounded-3xl shadow-lg overflow-hidden">
                 <CardContent className="p-0">
-                  <div className="grid grid-cols-1 md:grid-cols-2">
-                    <div className="bg-gradient-to-br from-rose-400 to-lavender-400 p-8 text-white">
-                      <h3 className="text-2xl font-medium mb-4 font-display">Let's Transform Your Story</h3>
-                      <p className="mb-6 text-white/90 font-light">
-                        Schedule a free 30-minute consultation to discuss your vision and discover how Jenni can help
-                        bring your story to life.
-                      </p>
-
-                      <div className="space-y-4">
-                        <div className="flex items-start">
-                          <div className="bg-white/20 p-2 rounded-full mr-4">
-                            <Sparkles className="h-5 w-5 text-white" />
-                          </div>
-                          <div>
-                            <h4 className="font-medium">Discover Your Story's Potential</h4>
-                            <p className="text-white/80 text-sm">
-                              Explore how your idea can transform into a captivating narrative
-                            </p>
-                          </div>
-                        </div>
-
-                        <div className="flex items-start">
-                          <div className="bg-white/20 p-2 rounded-full mr-4">
-                            <Palette className="h-5 w-5 text-white" />
-                          </div>
-                          <div>
-                            <h4 className="font-medium">Visual Storytelling Guidance</h4>
-                            <p className="text-white/80 text-sm">
-                              Learn how illustrations can enhance your story's impact
-                            </p>
-                          </div>
-                        </div>
-
-                        <div className="flex items-start">
-                          <div className="bg-white/20 p-2 rounded-full mr-4">
-                            <Lightbulb className="h-5 w-5 text-white" />
-                          </div>
-                          <div>
-                            <h4 className="font-medium">Creative Direction</h4>
-                            <p className="text-white/80 text-sm">Get expert insights on your story's development</p>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-
-                    <div className="p-8">
-                      <form className="space-y-4">
-                        <div className="space-y-2">
-                          <label htmlFor="name" className="text-sm font-medium text-rose-700">
-                            Your Name
-                          </label>
-                          <input
-                            id="name"
-                            type="text"
-                            placeholder="Enter your full name"
-                            className="w-full px-4 py-2 rounded-full border border-rose-200 focus:outline-none focus:ring-2 focus:ring-rose-400"
-                          />
-                        </div>
-
-                        <div className="space-y-2">
-                          <label htmlFor="email" className="text-sm font-medium text-rose-700">
-                            Email Address
-                          </label>
-                          <input
-                            id="email"
-                            type="email"
-                            placeholder="your@email.com"
-                            className="w-full px-4 py-2 rounded-full border border-rose-200 focus:outline-none focus:ring-2 focus:ring-rose-400"
-                          />
-                        </div>
-
-                        <div className="space-y-2">
-                          <label htmlFor="project-type" className="text-sm font-medium text-rose-700">
-                            Project Type
-                          </label>
-                          <select
-                            id="project-type"
-                            className="w-full px-4 py-2 rounded-full border border-rose-200 focus:outline-none focus:ring-2 focus:ring-rose-400"
-                          >
-                            <option value="">Select your project type</option>
-                            <option value="children-book">Children's Book</option>
-                            <option value="brand-story">Brand Story</option>
-                            <option value="personal-narrative">Personal Narrative</option>
-                            <option value="other">Other</option>
-                          </select>
-                        </div>
-
-                        <div className="space-y-2">
-                          <label htmlFor="message" className="text-sm font-medium text-rose-700">
-                            Tell us about your story
-                          </label>
-                          <textarea
-                            id="message"
-                            rows={3}
-                            placeholder="Briefly describe your story idea or project..."
-                            className="w-full px-4 py-2 rounded-2xl border border-rose-200 focus:outline-none focus:ring-2 focus:ring-rose-400"
-                          ></textarea>
-                        </div>
-
-                        <div className="space-y-2">
-                          <label htmlFor="preferred-date" className="text-sm font-medium text-rose-700">
-                            Preferred Consultation Date
-                          </label>
-                          <input
-                            id="preferred-date"
-                            type="date"
-                            className="w-full px-4 py-2 rounded-full border border-rose-200 focus:outline-none focus:ring-2 focus:ring-rose-400"
-                          />
-                        </div>
-
-                        <Button className="w-full bg-rose-400 hover:bg-rose-500 text-white rounded-full">
-                          Schedule Consultation
-                        </Button>
-                      </form>
-                    </div>
-                  </div>
+                  <BookingForm />
                 </CardContent>
               </Card>
 
@@ -690,47 +576,6 @@ export default function LandingPage() {
                   <span className="text-rose-600 font-medium">(555) 123-4567</span>
                 </p>
               </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Gallery Section */}
-        <section id="gallery" className="py-20 bg-white">
-          <div className="container">
-            <div className="text-center mb-16">
-              <Badge className="mb-4 bg-rose-100 text-rose-600 hover:bg-rose-100 rounded-full px-4 py-1 font-medium">
-                Stories Brought to Life
-              </Badge>
-              <h2 className="text-3xl font-medium tracking-tight sm:text-4xl md:text-5xl mb-4 font-display text-rose-800">
-                Story Transformations
-              </h2>
-              <p className="max-w-[700px] mx-auto text-rose-700/80 font-light">
-                Explore a selection of stories that Jenni has helped bring to life
-              </p>
-            </div>
-
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-              {[1, 2, 3, 4, 5, 6].map((item) => (
-                <div
-                  key={item}
-                  className="group relative overflow-hidden rounded-3xl aspect-[3/4] shadow-md transition-all duration-300 hover:shadow-xl"
-                >
-                  <Image
-                    src={`/story-sample-${item}.png?height=800&width=600&query=children+book+illustration+story+transformation+${item}`}
-                    alt={`Story transformation ${item}`}
-                    fill
-                    className="object-cover transition-transform duration-500 group-hover:scale-105"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-rose-500/70 via-rose-300/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
-                    <h3 className="text-white font-medium text-xl font-display">The Magical Journey</h3>
-                    <p className="text-white/80">A story of self-discovery and inner magic</p>
-                  </div>
-                </div>
-              ))}
-            </div>
-
-            <div className="mt-12 text-center">
-              <Button className="bg-rose-400 hover:bg-rose-500 text-white rounded-full">View Full Gallery</Button>
             </div>
           </div>
         </section>
