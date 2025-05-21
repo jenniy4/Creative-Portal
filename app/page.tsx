@@ -73,12 +73,14 @@ export default function LandingPage() {
                 Book a Consultation
               </Button>
             </div>
-            <div className="mt-16 relative w-full max-w-4xl aspect-[16/9] rounded-3xl overflow-hidden shadow-lg">
+
+            <div className="mt-16 relative w-full max-w-4xl aspect-[1/1] rounded-3xl overflow-hidden shadow-lg">
               <Image
-                src="/story-transformation.png?height=900&width=1600&query=creative+storytelling+process+illustration+soft+colors"
-                alt="Transforming ideas into stories"
+                src="/magical-portal.png"
+                alt="Magical portal to storytelling"
                 fill
                 className="object-cover"
+                priority
               />
             </div>
           </div>
